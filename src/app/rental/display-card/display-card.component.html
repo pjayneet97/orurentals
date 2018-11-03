@@ -1,0 +1,45 @@
+<div class="card">
+  <img class="card-img-top" src="{{sto | async}}" onError="this.src='assets/images/houseloading.gif';" style="height:200px;">
+  <div class="fab"> <i class="fa fa-inr"></i> {{property.rent}}</div>
+  <div class="card-body">
+    <h5 class="card-title">{{property.type}} in {{property.locality}}</h5>
+    <p class="card-text">{{property.bhk}} BHK | FOR: {{property.for}}</p>
+    <div class="row">
+      <div class="col"><button (click)="changemodalstatus()" class="btn btn-primary btn-block">Enquire</button></div>
+      <div class="col"><a class="btn btn-success btn-block" href="tel:{{property.ownercontact}}">Call Owner</a></div>
+    </div>
+  </div>
+      <!-- Modal -->
+      <div class="mod" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true" [hidden]=modalstatus>
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content" style="box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.507), 0 6px 20px 0 rgba(0, 0, 0, 0.5);">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Enquire for this property</h5>
+              <button type="button" class="close" (click)="changemodalstatus()" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">    
+                <div class="form-row form-group">                  
+                      <input type="text" class="form-control" placeholder="First name"  [(ngModel)]="property.name">
+                  </div>
+                  <div class="form-group">
+                      <label>Contact Number</label>
+                      <input  [(ngModel)]="property.contact" type="text" class="form-control" placeholder="+91 - xxxxxxxxxx" required>
+                  </div>
+                <div class="form-group">
+                  <label for="exampleFormControlTextarea1">Message (optional)</label>
+                  <textarea  [(ngModel)]="property.message" class="form-control" id="exampleFormControlTextarea1" placeholder="you can message us about your requirements and we will contact you soon" rows="3"></textarea>
+                </div>          
+            </div>
+            <div class="modal-footer">
+              <button (click)="changemodalstatus()" type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-primary" (click)="addEnquiry()" data-dismiss="modal">Send Enquiry</button>
+            </div>
+          </div>
+        </div>
+      </div>
+</div>  
+
+
+

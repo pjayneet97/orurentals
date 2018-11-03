@@ -1,0 +1,5 @@
+<app-navbar id="navbar"></app-navbar>
+<app-loader *ngIf="loadstatus;else output;"></app-loader>
+<ng-template #output>
+        <router-outlet (activate)="func()" ></router-outlet>
+</ng-template>

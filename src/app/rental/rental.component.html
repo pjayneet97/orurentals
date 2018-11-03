@@ -1,0 +1,193 @@
+
+<br><br>
+<div id="testimonial" data-scroll-reveal="enter from the bottom after 0.2s">
+        <div class="overlay">
+         
+            <div class="container text-center">
+              <h1 class="jumbotron-heading">ONRENT4U HOUSES</h1>
+              
+              <p>
+               <!--  <a [ngx-scroll-to]="'#properties'" class="btn btn-success my-2 mx-2">View Houses</a> -->
+               <button #modtogbtn type="button" data-toggle="modal" data-target="#propenq" class="btn btn-success">Enquire For Houses On Rent</button>
+              </p>
+            </div>
+         
+        </div>
+      </div>
+
+
+<div class="container text-center" id="properties">
+        <br><br><br>
+        <h1>FEATURED PROPERTIES</h1>
+        <p><em>Find the property that matches your need</em></p>       
+        <br><br>
+        <div class="container" id="alert" style="position:fixed;top:100px;z-index:4;">
+            <div class="alert alert-success alert-dismissible fade show" role="alert" [hidden]="rentalservice.alert">
+                <strong>Hello!</strong> Thank you for showing intrest in this property. Our Executive will contact you soon!!
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          </div>
+
+          <div class="row" id="filters">
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <select class="form-control" [(ngModel)]="type" (change)="onChange()">
+                            <option value="">Select Type</option>
+                            <option value="flat">flat</option>
+                            <option value="house">house</option>
+                            <option value="pg">PG</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <select class="form-control" [(ngModel)]="bhk" (change)="onChange()">
+                            <option value="">Select Size</option>
+                            <option value="1">1 BHK</option>
+                            <option value="2">2 BHK</option>
+                            <option value="3">3 BHK</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <select class="form-control" [(ngModel)]="for" (change)="onChange()">
+                            <option value="">Select For</option>
+                            <option value="girls">Girl</option>
+                            <option value="boys">Boys</option>
+                            <option value="family">Family</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-12 col-md-4 col-lg-3">
+                <div class="form-group">
+                    <select class="form-control" [(ngModel)]="locality" (change)="onChange()">
+                            <option value="">Select Locality</option>    
+                            <option *ngFor="let localit of rentalservice.localities" value="{{localit}}">{{localit}}</option>
+                    </select>
+                </div>
+            </div>                                                      
+      </div>
+         
+    <app-loader *ngIf="loader; else houses;"></app-loader>
+    <ng-template #houses>
+        <div class="row" *ngIf="properties?.length>0;else noresult;">
+
+
+
+            <app-display-card class="col-lg-4" *ngFor="let property of properties" [property]="property"></app-display-card>
+        </div>  
+        <ng-template #noresult>
+            <h3>Coming Soon! We are Working on Adding rental properties</h3>
+            <h3>Till that you can enquire about houses by filling Form</h3>
+            <br><br><br>
+        </ng-template>
+    </ng-template>
+  </div>
+
+
+
+
+
+
+
+
+
+<!--   <app-contact #contact></app-contact> -->
+  <app-footer></app-footer>
+
+
+   <!--enq for prop random Modal -->
+    <div class="modal fade" id="propenq" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLongTitle">Enquire For Rent</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+                  <div class="row">
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Name" [(ngModel)]="property.name">
+                    </div>
+                    <div class="col">
+                      <input type="text" class="form-control" placeholder="Contact" [(ngModel)]="property.contact">
+                    </div>            
+                  </div>   
+                  <br>
+                  <div class="row">
+                    <div class="col">
+                            Select Type
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="property.type">
+                            <option value="house">HOUSE</option>
+                            <option value="flat">FLAT</option>
+                            <option value="pg">PG</option>
+                        </select>
+                    </div>
+                    <div class="col">
+                            Select Size
+                        <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="property.bhk">
+                            <option value="1">1 BHK</option>
+                            <option value="2">2 BHK</option>
+                            <option value="3">3 BHK</option>
+                        </select>
+                    </div>
+                  </div>
+                  <div class="row">
+                      <div class="col">
+                        localities
+                          <!-- <input type="text" class="form-control" placeholder="preffered areas" [(ngModel)]="property.locality"> -->
+                          <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="property.locality">
+                                <option value="">Select Locality</option>    
+                                <option *ngFor="let localit of rentalservice.localities" value="{{localit}}">{{localit}}</option>
+                          </select>
+                      </div>
+                      <div class="col">
+                           Select For
+                          <select class="custom-select my-1 mr-sm-2"  [(ngModel)]="property.for">
+                              <option value="boys">BOYS</option>
+                              <option value="girls">GIRLS</option>
+                              <option value="family">FAMILY</option>                          
+                          </select>
+                      </div>
+                  </div>
+                    <div class="row">
+                       
+                       <div class="col">
+                            Select Rent Range
+                            <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="property.rent">
+                                    <option selected>3000 - 5000</option>  
+                                    <option value="5000 - 10000">5000 - 10000</option>
+                                    <option value="5000 - 10000">10000 - 15000</option>
+                                    <option value="5000 - 10000">15000 - 20000</option>                          
+                                </select>
+                       </div>
+                              
+                    </div>
+                            
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+              <button type="button" class="btn btn-success btn-block" data-dismiss="modal" (click)="addrendpropenq()">SUBMIT</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div  style="position: fixed;bottom:0px; z-index:4">
+            <div class="alert alert-danger alert-dismissible fade show" role="alert" [hidden]="formalert">
+                <strong>Hello!</strong> Please Fill All the Fields Properly
+                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+          </div>
+
+
+
+
+

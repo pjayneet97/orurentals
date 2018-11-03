@@ -1,0 +1,807 @@
+<app-loader *ngIf="false;else show"></app-loader>
+
+<ng-template #show>
+  <br><br>
+  <div class="" style="background-color:#e7e9ec">
+    
+    <img src="assets/images/2.png" style="width:100%; max-width:1600px;" alt="">
+  </div>
+
+<div id="testimonial" data-scroll-reveal="enter from the bottom after 0.2s">
+    <div class="overlay">     
+        <div class="container text-center">
+          <div class="row" >
+              <div class="col-md-3">
+                <div class="row">
+                    <div class="col" [ngx-scroll-to]="'#tutors'">
+                        <div class="card" style="width: auto;">
+                            <i class="material-icons text-center md-48">supervisor_account</i>
+                            <p style="color:black" class="card-text text-center">
+                            <strong> Tutors </strong>
+                            </p>
+                        </div>      
+                    </div>
+                    <div class="col" [ngx-scroll-to]="'#houses'">
+                        <div class="card" style="width: auto;">
+                            <i class="material-icons text-center md-48">home</i>
+                            <p style="color:black" class="card-text text-center">
+                            <strong> Houses </strong>
+                            </p>
+                        </div>      
+                    </div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                  <div class="row">
+                      <div class="col" [ngx-scroll-to]="'#vehicles'">
+                          <div class="card" style="width: auto;">
+                              <i class="material-icons text-center md-48">directions_car</i>
+                              <p style="color:black" class="card-text text-center">
+                              <strong> Vehicles </strong>
+                              </p>
+                          </div>      
+                      </div>
+                      <div class="col" [ngx-scroll-to]="'#pool'">
+                          <div class="card" style="width: auto;">
+                              <i class="material-icons text-center md-48">pool</i>
+                              <p style="color:black" class="card-text text-center">
+                              <strong> Pools </strong>
+                              </p>
+                          </div>      
+                      </div>
+                  </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row">
+                        <div class="col" [ngx-scroll-to]="'#workers'">
+                            <div class="card" style="width: auto;">
+                                <i class="material-icons text-center md-48">accessibility</i>
+                                <p style="color:black" class="card-text text-center">
+                                <strong> Workers </strong>
+                                </p>
+                            </div>      
+                        </div>
+                        <div class="col" [ngx-scroll-to]="'#wedding'">
+                            <div class="card" style="width: auto;">
+                                <i class="material-icons text-center md-48">event</i>
+                                <p style="color:black" class="card-text text-center">
+                                <strong> EVENT </strong>
+                                </p>
+                            </div>      
+                        </div>
+                    </div>
+                  </div> 
+                  <div class="col-md-3">
+                      <div class="row">
+                          <div class="col" [ngx-scroll-to]="'#it'">
+                              <div class="card" style="width: auto;">
+                                  <i class="material-icons text-center md-48">laptop</i>
+                                  <p style="color:black" class="card-text text-center">
+                                  <strong> IT Services </strong>
+                                  </p>
+                              </div>      
+                          </div>
+                          <div class="col" [ngx-scroll-to]="'#photography'">
+                              <div class="card" style="width: auto;">
+                                  <i class="material-icons text-center md-48">camera_alt</i>
+                                  <p style="color:black" class="card-text text-center">
+                                  <strong> Photography </strong>
+                                  </p>
+                              </div>      
+                          </div>
+                      </div>
+                    </div> 
+
+            </div>  
+
+        </div>                
+    </div>
+</div> 
+
+  <div class="album py-5" style="background-color:#F5F5F5">
+    <div class="container">  
+      <div class="row">
+        <div class="col-md-3" id="tutors">
+          <div routerLink="tutors" class="card mb-4 cardblock box-shadow style_prevu_kit">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/tutor1.jpeg" data-holder-rendered="true">
+            <div class="card-body">
+              <h3 class="text-center">TUTORS</h3>
+                <div class="">
+                  <button type="button" routerLink="tutors" class="btn btn-block btn-outline-success">Enquire</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" id="houses">
+              <div routerLink="houses" class="card mb-4 cardblock box-shadow style_prevu_kit">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/house1.jpeg" data-holder-rendered="true">
+                <div class="card-body">
+                      <h3 class="text-center">HOUSES ON RENT</h3>
+                    <div class="">
+                      <button type="button" routerLink="houses" class="btn btn-block btn-outline-success">Enquire</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3" id="pool">
+                  <div class="card mb-4 cardblock box-shadow style_prevu_kit">
+                    <img  data-toggle="modal" data-target="#typeofpool" class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/pool1.jpg" data-holder-rendered="true">
+                    <div class="card-body">
+                          <h3 class="text-center">POOLS FOR PARTY</h3>
+                        <div class="">
+                          <button type="button" data-toggle="modal" data-target="#typeofpool" class="btn btn-block btn-outline-success">Enquire</button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div  data-toggle="modal" data-target="#typeofvehicle" class="col-md-3" id="vehicles">
+                <div class="card mb-4 cardblock box-shadow style_prevu_kit">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/car1.jpg" data-holder-rendered="true">
+                  <div class="card-body">
+                        <h3 class="text-center">VEHICLES ON RENT</h3>
+                      <div class="">
+                        <button type="button"  data-toggle="modal" data-target="#typeofvehicle" class="btn btn-block btn-outline-success">Enquire</button>
+                      </div>
+                  </div>
+                </div>
+            </div>
+      </div>
+      <div class="row">
+        <div  data-toggle="modal" data-target="#typeofweddingservice" class="col-md-3" id="wedding">
+          <div class="card mb-4 cardblock box-shadow style_prevu_kit">
+            <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/event1.jpg" data-holder-rendered="true">
+            <div class="card-body">
+              <h3 class="text-center">EVENT</h3>
+                <div class="">
+                  <button type="button" data-toggle="modal" data-target="#typeofweddingservice" class="btn btn-block btn-outline-success">Enquire</button>
+                </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-3" id="it">
+              <div data-toggle="modal" data-target="#typeofitprofessional" class="card mb-4 cardblock box-shadow style_prevu_kit">
+                <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/it1.jpeg" data-holder-rendered="true">
+                <div class="card-body">
+                      <h3 class="text-center">IT PROFESSIONALS</h3>
+                    <div class="">
+                      <button type="button"  data-toggle="modal" data-target="#typeofitprofessional" class="btn btn-block btn-outline-success">Enquire</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-3"  data-toggle="modal" data-target="#typeofworker" id="workers">
+                  <div class="card mb-4 cardblock box-shadow style_prevu_kit">
+                    <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/workers1.jpg" data-holder-rendered="true">
+                    <div class="card-body">
+                          <h3 class="text-center">WORKERS</h3>
+                        <div class="">
+                          <button type="button" data-toggle="modal" data-target="#typeofworker" class="btn btn-block btn-outline-success">Enquire</button>
+                        </div>
+                    </div>
+                  </div>
+              </div>
+              <div class="col-md-3" id="photography">
+                <div data-toggle="modal" data-target="#photographyform" class="card mb-4 cardblock box-shadow style_prevu_kit">
+                  <img class="card-img-top" data-src="holder.js/100px225?theme=thumb&amp;bg=55595c&amp;fg=eceeef&amp;text=Thumbnail" alt="Thumbnail [100%x225]" style="height: 225px; width: 100%; display: block;" src="assets/images/photo1.jpeg" data-holder-rendered="true">
+                  <div class="card-body">
+                        <h3 class="text-center">PHOTOGRAPHY</h3>
+                      <div class="">
+                        <button data-toggle="modal" data-target="#photographyform" type="button" class="btn btn-block btn-outline-success">Enquire</button>
+                      </div>
+                  </div>
+                </div>
+            </div>
+      </div>
+    </div>
+  </div>
+
+  
+ 
+<div style="background-color:#eaeaea">
+ <div class="container">
+     <br><br><br>       
+     <h2 class="text-center"><strong>How It Works?</strong></h2>
+       
+   
+<br>
+ <div class="row text-center pad-bottom" >
+     <div class="col-md-3">
+        <img src="assets/images/think.png" style="width: 120px; height:120px;" >
+        <br><br> <h4><strong>Want to Rent something ?</strong></h4>
+        
+     </div>
+     <div class="col-md-3">
+     
+     <img  src="assets/images/onrent1.png" style="width: 120px; height:120px;" >
+      <br>  <br><h4><strong> Onrent4u.com Anything on rent</strong></h4>
+      
+     </div>
+     <div class="col-md-3">
+          <img src="assets/images/phone1.png" style="width:120px; height: 120px;"> 
+       <br> <br><h4><strong> Contact Us via Phone or Message </strong></h4>
+
+     </div>
+     <div class="col-md-3">
+              <img src="assets/images/hand.png" style="width: 120px; height: 120px;">
+       <br> <br><h4><strong> Get your Work done</strong></h4>
+      
+     </div>
+ </div>
+    <br><br><br>
+
+</div>
+
+</div>
+
+<div style="background-color:#F6F6F6">
+  <div class="container">
+    <br><br>
+    <div class="row">
+      <div class="col-xs-12 col-md-6 ">
+       <div class="about-img"><img style="width:100%;max-width:300px;" src="assets/images/forrent.png" alt=""></div>
+      </div>
+      <div class="col-xs-12 col-md-6">
+        <div class="about-text">
+          <h2>OUR MISSION AT ONRENT4U</h2>
+          <hr>
+         <p>
+          Onrent4u is a One stop solution to all your rental needs in Udaipur.We provide you with Houses on Rent in udaipur, Best Home tutors in udaipur,School tutors in udaipur,Car or Bike Rentals in udaipur,Coaching Tutors in udaipur,Wedding Event Management,Photography,Swimming Pools,IT professional,Labours,Plumber,Electrician etc.</p>
+          <p> We provide Quality and on time service in udaipur for all your needs.Onrent4u is your Service Expert in Udaipur and provides trusted Solution to all your needs.
+         </p>
+        </div>
+      </div>
+    </div>
+    <br><br>
+  </div>
+</div>
+
+
+<div style="background-color:#eaeaea">
+ <div class="container">
+    <br><br><br>
+            
+    <h2 class="text-center"><strong>Why to Choose us ?</strong></h2>
+  
+
+<br>
+<div class="row text-center" >
+<div class="col-md-3">
+   <img width="120px" src="assets/images/click.png">
+    <h4 class="mt-2"><strong>One stop Solution</strong></h4>
+   
+</div>
+<div class="col-md-3  ">
+
+<img width="120px"  src="assets/images/time.png">
+    <h4 class="mt-2"><strong> On Time Service</strong></h4>
+  
+</div>
+<div class="col-md-3">
+     <img width="120px" src="assets/images/handshake.png"> 
+    <h4 class="mt-2"><strong>Trusted Service </strong></h4>
+   
+</div>
+<div class="col-md-3">
+         <img width="120px" src="assets/images/quality.png">
+    <h4 class="mt-2"><strong>Quality Ensured </strong></h4>
+   
+</div>
+<br>
+</div>
+<br><br><br>
+</div>
+
+</div>
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<app-contact></app-contact>
+<app-footer></app-footer>
+
+
+
+<div class="" id="alert" style="position: fixed;bottom:0px; z-index:4">
+  <div class="alert alert-success alert-dismissible fade show" role="alert" [hidden]="workerservice.enquiryalert">
+      <strong>Hello!</strong> Thank you for showing intrest. Our Executive will contact you soon!!
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+</div>
+
+
+<div style="margin:14px;" class="modal fade" id="typeofworker" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Type of Workers</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>  
+	 
+          <!-- Modal body -->
+          <div class="modal-body">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 my-2">
+                  <img (click)="func('labour')" data-toggle="modal" data-dismiss="modal" data-target="#workerenquiryform" src="assets/images/labours.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Simple Labour</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                  <img (click)="func('AC repair')" data-toggle="modal" data-dismiss="modal" data-target="#workerenquiryform" src="assets/images/ac-repaire.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>A.C. Repair</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                <img (click)="func('plumber')" data-toggle="modal" data-dismiss="modal" data-target="#workerenquiryform" src="assets/images/plumber_l.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Plumber</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                  <img (click)="func('driver')" data-toggle="modal" data-dismiss="modal" data-target="#workerenquiryform" src="assets/images/driver.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Driver</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                  <img (click)="func('electrician')" data-toggle="modal" data-dismiss="modal" data-target="#workerenquiryform" src="assets/images/electrician.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Electrician</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                  <img (click)="func('carpenter')" data-toggle="modal" data-dismiss="modal" data-target="#workerenquiryform" src="assets/images/carpenter.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Carpenter</h6>
+                </div>
+              </div>
+            </div>
+          </div>                  
+             
+	  </div>typeofweddingservice
+  </div>
+</div>
+
+
+<div class="modal fade" id="workerenquiryform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Fill your details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                  <input type="text" class="form-control" placeholder="Name" [(ngModel)]="enq.name">
+              </div>
+              </div>    
+              <div class="row">
+               <div class="col">
+                  <input type="text" class="form-control" placeholder="Mobile Number" [(ngModel)]="enq.contact" required>
+               </div>
+              </div>            
+              <div class="row">                 
+                  <div class="col">
+                      <input type="text" class="form-control" placeholder="In which Area you want ?" [(ngModel)]="enq.area">
+                  </div>                
+               </div>
+             
+               <div class="row">     
+                 
+                   <div class="col">
+                     Date
+                     <input type="date" class="form-control" [(ngModel)]="enq.reqdate">
+                   </div>
+                   <div class="col">
+                     Time
+                    <input type="text" class="form-control" [(ngModel)]="enq.reqtime" placeholder="required time">
+                  </div>                
+              </div>
+              
+            
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="addEnqWorker()"  data-dismiss="modal">Send Enquiry</button>
+      </div>
+
+ </div>
+  </div>
+</div>
+
+<div style="margin:14px;"class="modal fade" id="typeofpool" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Type of Pools</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+
+	   <div class="modal-body">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 my-2">
+                 <img (click)="selectpool('terrace')" data-toggle="modal" data-dismiss="modal" data-target="#poolenquiry"  src="assets/images/trs.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Terrace</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                 <img (click)="selectpool('simple')" data-toggle="modal" data-dismiss="modal" data-target="#poolenquiry" src="assets/images/simple-p.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Simple</h6>
+                </div>
+              </div>
+            </div>
+        </div>
+	 
+	  </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="poolenquiry" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Fill your details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+              <div class="row">             
+               <div class="col">
+                <input type="text" class="form-control" placeholder="Name" [(ngModel)]="enqpool.name">
+               </div>
+              </div>    
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Mobile Number" [(ngModel)]="enqpool.contact" required>
+                </div>
+              </div>            
+                  <div class="row">                 
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="No. of hours" [(ngModel)]="enqpool.hours">
+                  </div>                
+               </div>
+              <div class="row">                 
+                  <div class="col">
+                    Date
+                    <input type="date" class="form-control" placeholder="Booking date " [(ngModel)]="enqpool.reqdate">
+                  </div>                
+               </div>
+              <div class="row">                 
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="No. Of Persons" [(ngModel)]="enqpool.persons"> 
+                  </div>               
+               </div>       
+       
+        
+      </div>
+      <div class="modal-footer">
+  
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="addEnqPool()"  data-dismiss="modal">Send Enquiry</button>
+      </div>
+   
+ </div>
+  </div>
+</div>
+
+<div style="margin:14px;" class="modal fade" id="typeofweddingservice" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Type of Service in Wedding</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	  <div class="modal-body">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-6 my-2">
+               <img (click)="selectweddingservice('decoration')" data-toggle="modal" data-dismiss="modal" data-target="#weddingform" src="assets/images/decoration.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>Decoration</h6>
+              </div>
+                <div class="col-sm-6 my-2">
+               <img (click)="selectweddingservice('anchor')" data-toggle="modal" data-dismiss="modal" data-target="#weddingform"  src="assets/images/anchor.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>Anchor</h6>
+              </div>
+                <div class="col-sm-6 my-2">
+               <img (click)="selectweddingservice('tent work')" data-toggle="modal" data-dismiss="modal" data-target="#weddingform"  src="assets/images/tent-work.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>Tent Works</h6>
+              </div>
+              <div class="col-sm-6 my-2">
+               <img (click)="selectweddingservice('photography')" data-toggle="modal" data-dismiss="modal" data-target="#weddingform"  src="assets/images/photography.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>Photography</h6>
+              </div>
+              <div class="col-sm-6 my-2">
+               <img (click)="selectweddingservice('DJ')" data-toggle="modal" data-dismiss="modal" data-target="#weddingform"  src="assets/images/dj.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>DJ</h6>
+              </div>
+              <div class="col-sm-6 my-2">
+               <img (click)="selectweddingservice('banquets')" data-toggle="modal" data-dismiss="modal" data-target="#weddingform"  src="assets/images/banquet.jpg" class="img-fluid img-thumbnail p-2"> 
+                <h6>Banquets</h6>
+              </div>
+            </div>
+          </div>
+      </div>
+
+   </div>
+ </div>
+</div>
+
+<div class="modal fade" id="weddingform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Fill your details</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+              <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Name" [(ngModel)]="enqwedding.name">
+                </div>
+              </div>    
+              <div class="row">
+               <div class="col">
+                <input type="text" class="form-control" placeholder="Mobile Number" [(ngModel)]="enqwedding.contact" required>
+               </div>
+              </div>            
+                
+          <div class="row">
+                <div class="col">
+                  <input type="text" class="form-control" placeholder="Services You Want" [(ngModel)]="enqwedding.services">
+                </div>
+              </div>
+
+      
+        <div class="row">     
+                  <div class="col">
+                   Date
+                    <input type="date" class="form-control" [(ngModel)]="enqwedding.reqdate">
+                  </div>                
+               </div>		
+                 
+      </div>
+      <div class="modal-footer">
+  
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" (click)="addEnqWedding()"  data-dismiss="modal">Send Enquiry</button>
+      </div>
+   
+ </div>
+  </div>
+</div>
+
+<div style="margin:14px;" class="modal fade" id="typeofitprofessional" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Type of IT Professionals</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	   <div class="modal-body">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-6 my-2">
+              <img (click)="selectitservice('web developer')" data-toggle="modal" data-dismiss="modal" data-target="#itserviceform" src="assets/images/web.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>Web Developer</h6>
+              </div>
+                <div class="col-sm-6 my-2">
+              <img (click)="selectitservice('SEO/SEM')" data-toggle="modal" data-dismiss="modal" data-target="#itserviceform" src="assets/images/seo.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>SEO/SMO Specialist</h6>
+              </div>
+                <div class="col-sm-6 my-2">
+              <img  (click)="selectitservice('ONLINE MARKETING')" data-toggle="modal" data-dismiss="modal" data-target="#itserviceform" src="assets/images/online.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>Online Marketing</h6>
+              </div>
+              <div class="col-sm-6 my-2">
+              <img  (click)="selectitservice('GRAPHIC DESIGNER')" data-toggle="modal" data-dismiss="modal" data-target="#itserviceform" src="assets/images/graphic.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                <h6>Graphic Designer</h6>
+              </div>
+            </div>
+            </div>
+      </div>
+	 
+	 
+	  </div>
+  </div>
+</div>
+
+<div class="modal fade" id="itserviceform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Fill your details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+              <div class="row">
+                 <div class="col">
+                  <input type="text" class="form-control" placeholder="Name" [(ngModel)]="enqit.name">
+                 </div>
+                </div>    
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Mobile Number" [(ngModel)]="enqit.contact" required>
+                  </div>
+                </div>            
+                  
+				        <div class="row">
+                 <div class="col">
+                  <input type="text" class="form-control" placeholder="Description of services you want" [(ngModel)]="enqit.description">
+                 </div>
+                </div>
+
+					  
+        </div>
+        <div class="modal-footer">
+		
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addEnqIt()"  data-dismiss="modal">Send Enquiry</button>
+        </div>
+     
+	 </div>
+    </div>
+</div>
+
+<div style="margin:14px;" class="modal fade" id="typeofvehicle" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Type of Vehicle</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+	    <div class="modal-body">
+            <div class="col-sm-12">
+              <div class="row">
+                <div class="col-sm-6 my-2">
+                  <img (click)="selectvehicle('2 wheeler')" data-toggle="modal" data-dismiss="modal" data-target="#vehicleform" src="assets/images/two-vh.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>2-Wheeler</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                  <img (click)="selectvehicle('4-wheeler')" data-toggle="modal" data-dismiss="modal" data-target="#vehicleform" src="assets/images/four-vh.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>4-Wheeler</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                <img (click)="selectvehicle('Loading Tampo')" data-toggle="modal" data-dismiss="modal" data-target="#vehicleform" src="assets/images/loading-tempo.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Loading Tempo</h6>
+                </div>
+                <div class="col-sm-6 my-2">
+                  <img (click)="selectvehicle('Cycle')" data-toggle="modal" data-dismiss="modal" data-target="#vehicleform" src="assets/images/cycle.jpg" alt="" class="img-fluid img-thumbnail p-2">
+                  <h6>Cycle</h6>
+                </div>
+              </div>
+            </div>
+        </div>             
+      </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="vehicleform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Fill your details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+              <div class="row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Name" [(ngModel)]="enqvehicle.name">
+                </div>
+                </div>    
+                <div class="row">
+                  <div class="col">
+                      <input type="text" class="form-control" placeholder="Mobile Number" [(ngModel)]="enqvehicle.contact" required>
+                  </div>
+                </div>            
+                    <div class="row">                 
+                    <div class="col">
+                        <input type="text" class="form-control" placeholder="No. of Hours" [(ngModel)]="enqvehicle.reqhours">
+                    </div>                
+                 </div>
+				  <div class="row">                 
+                    <div class="col">
+                      Date
+                        <input type="date" class="form-control" placeholder="Date of Booking" [(ngModel)]="enqvehicle.reqdate">
+                    </div>                
+                 </div>
+        </div>
+        <div class="modal-footer">
+		
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addEnqVehicle()"  data-dismiss="modal">Send Enquiry</button>
+        </div>
+     
+	 </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="photographyform" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+    <div class="modal-dialog modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLongTitle">Fill your details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+                <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Name" [(ngModel)]="enqwedding.name">
+                  </div>
+                </div>    
+                <div class="row">
+                 <div class="col">
+                  <input type="text" class="form-control" placeholder="Mobile Number" [(ngModel)]="enqwedding.contact" required>
+                 </div>
+                </div>            
+                  
+            <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Services You Want" [(ngModel)]="enqwedding.services">
+                  </div>
+                </div>
+  
+        
+          <div class="row">     
+                    <div class="col">
+                      Date
+                      <input type="date" class="form-control" placeholder="Booking for Date " [(ngModel)]="enqwedding.reqdate">
+                    </div>                
+                 </div>		
+                   
+        </div>
+        <div class="modal-footer">
+    
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" (click)="addEnqPhotography()"  data-dismiss="modal">Send Enquiry</button>
+        </div>
+     
+   </div>
+    </div>
+  </div>
+
+
+
+  <div  style="position: fixed;bottom:0px; z-index:4">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" [hidden]="formerror">
+          <strong>Hello!</strong> Please Fill All the Fields Properly
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    </div>
+
+</ng-template>

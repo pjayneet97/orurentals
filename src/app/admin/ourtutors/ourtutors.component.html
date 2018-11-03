@@ -1,0 +1,46 @@
+<div class="table-responsive">
+  <table class="table table-striped table-sm">
+    <thead>
+      <tr>
+        <th>DATE</th>
+        <th>NAME</th>
+        <th>CONTACT</th>
+        <th>EXPERIENCE</th>
+        <th>SUBJECTS</th>
+        <th>PREFERANCE</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let tutor of tutors">
+        <td>{{tutor.date.seconds*1000|date}}</td>
+        <td>{{tutor.name}}</td>
+        <td>{{tutor.contact}}</td>
+        <td>{{tutor.experience}}</td>
+        <td>{{tutor.subjects}}</td>
+        <td>{{tutor.preferance}}</td>
+       
+        <td>
+
+
+          <ng-template #content let-c="close" let-d="dismiss">
+            <div class="modal-header">
+              <h4 class="modal-title" id="modal-basic-title">Delete Warning</h4>
+                <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                  <span aria-hidden="true">&times;</span>
+                </button>
+              </div>
+              <div class="modal-body">
+                <p>You will not be able to restore this data once deleted</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" (click)="deleteEnquiry(tutor.id)">Delete</button>
+            </div>
+          </ng-template>
+          
+          <button class="btn btn-md btn-outline-primary" (click)="open(content)"><span aria-hidden="true">&times;</span></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

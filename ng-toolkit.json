@@ -1,0 +1,18 @@
+{
+  "universal": {
+    "skipInstall": false,
+    "directory": ".",
+    "project": "orurental"
+  },
+  "serverless": {
+    "provider": "firebase",
+    "firebaseProject": "[orurental]",
+    "skipInstall": false,
+    "directory": ".",
+    "project": "orurental",
+    "serverless": {
+      "aws": {},
+      "gcloud": {}
+    }
+  }
+}

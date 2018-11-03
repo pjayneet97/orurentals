@@ -1,0 +1,114 @@
+<nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#1e466f;opacity: 1;">
+  <a style="color:#ffffff" class="navbar-brand" routerLink="/"></a>
+  <a style="color:#ffffff" class="navbar-brand" routerLink="/"><img src="assets/images/logo.png" alt="" width="40px"> ONRENT<i style="color:#3fc6ef;font-size: 25px;">4</i>U </a>
+  <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="navbar-collapse collapse" id="navbarColor02">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item">
+        <button style="background:none;border:none" class="nav-link"  data-toggle="collapse" data-target="#navbarColor02" routerLink="tutors">TUTORS</button>
+      </li>
+      <li class="nav-item">
+        <button style="background:none;border:none" class="nav-link"  data-toggle="collapse" data-target="#navbarColor02" routerLink="houses">HOUSES</button>
+      </li>
+    </ul>
+    <!-- <button style="background-color:#f26631eb;border-color:#f26631eb" class="btn btn-success navbar-btn"><i class="material-icons" style="font-size:24px;" aria-hidden="true">call</i>  9588062419</button> -->
+    <div class="col-sm-3"><button class="btn btn-block btn-success" data-toggle="modal" data-target="#addproperty">Add Property</button></div>
+  </div>
+</nav>
+
+<div class="modal fade" id="addproperty" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Add Rental Property</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+            <div class="row">
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Name" [(ngModel)]="property.owner">
+              </div>
+              <div class="col">
+                <input type="text" class="form-control" placeholder="Contact" [(ngModel)]="property.ownercontact">
+              </div>            
+            </div>   
+            <div class="row">
+              <div class="col">
+                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="property.type">
+                      <option selected>Choose Type</option>
+                      <option value="house">HOUSE</option>
+                      <option value="flat">FLAT</option>
+                      <option value="pg">PG</option>
+                  </select>
+              </div>
+              <div class="col">
+                  <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="property.bhk">
+                      <option selected>Choose Size</option>
+                      <option value="1">1 BHK</option>
+                      <option value="2">2 BHK</option>
+                      <option value="3">3 BHK</option>
+                  </select>
+              </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <!-- <input type="text" class="form-control" placeholder="LOCALITY" [(ngModel)]="property.locality"> -->
+                    <select class="form-control" [(ngModel)]="property.locality">
+                        <option value="">Select Locality</option>    
+                        <option *ngFor="let localit of rentalservice.localities" value="{{localit}}">{{localit}}</option>
+                </select>
+                </div>
+                <div class="col">
+                    <select class="custom-select my-1 mr-sm-2" id="inlineFormCustomSelectPref" [(ngModel)]="property.for">
+                        <option selected>Choose For</option>  
+                        <option value="boys">BOYS</option>
+                        <option value="girls">GIRLS</option>
+                        <option value="family">FAMILY</option>                          
+                    </select>
+                </div>
+            </div>
+              <div class="row">
+                  <div class="col">
+                    <input type="text" class="form-control" placeholder="Rent" [(ngModel)]="property.rent">
+                  </div>
+                  <div class="col">
+                    <input type="file"  (change)="choosefiles($event)" class="form-control" placeholder="image">
+                  </div>            
+              </div>
+                 
+              <div *ngIf="percentage | async as pct; else noimage"> 
+                  <img src="{{imgsrc | async}}" class="img-thumbnail" height="50px" width="50px" alt="wait">       
+                <p><ngb-progressbar type="success" [value]="pct"></ngb-progressbar></p>                            
+              </div>    
+              <ng-template #noimage>image is optional</ng-template> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary" data-dismiss="modal" (click)="applyProperty()">Add Property</button>
+      </div>
+    </div>
+  </div>
+</div> 
+<button  type="button" style="position:fixed; bottom:20px; left:20px; z-index:1000" class="btn btn-success btn-circle btn-xl"  data-toggle="modal" data-target="#addproperty"><i class="material-icons text-center md-48">add</i><i class="material-icons text-center md-48">home</i></button>
+
+<div class="" id="alert" style="position: fixed;bottom:0px; z-index:2000">
+    <div class="alert alert-success alert-dismissible fade show" role="alert" [hidden]="successalert">
+        <strong>Hello!</strong> We have taken your request.you will be notified once your property is varified and listed.
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+  </div>
+
+  <div class="" id="alert" style="position: fixed;bottom:0px; z-index:2000">
+      <div class="alert alert-danger alert-dismissible fade show" role="alert" [hidden]="dangeralert">
+          <strong>Hello!</strong>Please fill all the form fields properly.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    </div>
