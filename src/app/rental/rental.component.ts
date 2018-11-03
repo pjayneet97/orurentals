@@ -21,7 +21,7 @@ export class RentalComponent implements OnInit {
   locality=""
   for=""
   constructor(public rentalservice :RentalService,public db: AngularFirestore,public title:Title,public meta:Meta) { 
-    this.title.setTitle('Onrent4u Houses')
+    this.title.setTitle('Orurental Houses')
     this.meta.updateTag({ name: 'description', content: 'best houses for rent in udaipur' })
   }
   ngOnInit() {
