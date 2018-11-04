@@ -81,7 +81,7 @@ export class AdminComponent implements OnInit {
   }
   onChange(){
 
-    if(this.email=="admin@onrent4u.com"&&this.word=="open@onrent4u"){
+    if(this.email=="admin@orurentals.com"&&this.word=="open@orurentals"){
       this.auth=true
     }
   }

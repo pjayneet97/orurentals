@@ -47,12 +47,14 @@ import { ContactenquiryComponent } from './admin/contactenquiry/contactenquiry.c
 import { LoaderComponent } from './loader/loader.component';
 import { RentenquiriesComponent } from './admin/rentenquiries/rentenquiries.component';
 import { AppliedrentalsComponent } from './admin/appliedrentals/appliedrentals.component';
+import { LocalityComponent } from './admin/locality/locality.component';
 
 
 const routes: Routes = [
   { path: 'admin', component: AdminComponent,children:[
     { path: 'houses', component: HousesComponent },
     { path: 'appliedrentals', component: AppliedrentalsComponent },
+    { path: 'managelocality', component: LocalityComponent },
     { path: 'enquiries', component: EnquiriesComponent },
     { path: 'coachingtutor', component: CoachingtutorComponent },
     { path: 'hometutor', component: HometutorComponent },
@@ -104,7 +106,8 @@ const routes: Routes = [
     ContactenquiryComponent,
     LoaderComponent,
     RentenquiriesComponent,
-    AppliedrentalsComponent
+    AppliedrentalsComponent,
+    LocalityComponent
   ],
   imports:[
  CommonModule,

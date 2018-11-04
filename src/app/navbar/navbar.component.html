@@ -73,11 +73,11 @@
             </div>
               <div class="row">
                   <div class="col">
-                    <input type="text" class="form-control" placeholder="Rent" [(ngModel)]="property.rent">
+                    <input type="text" class="form-control" placeholder="Expected Rent" [(ngModel)]="property.rent">
                   </div>
                   <div class="col">
                       <div class="upload-btn-wrapper">
-                          <button class="btn btn-success">Add Image (optional)</button>
+                          <button class="btn btn-success">Add Image</button>
                           <input type="file"  (change)="choosefiles($event)" class="form-control" placeholder="image">
                         </div>
                     
@@ -88,7 +88,7 @@
                   <img src="{{imgsrc | async}}" class="img-thumbnail" height="50px" width="50px" alt="wait">       
                 <p><ngb-progressbar type="success" [value]="pct"></ngb-progressbar></p>                            
               </div>    
-              <ng-template #noimage>wait for image to upload if added</ng-template> 
+              <ng-template #noimage>wait for image(optional) to upload if added</ng-template> 
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
