@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root'
 })
 export class RentalService {
-  localities=["fatehpura","shobhagpura","malla talai"]
+  localities
   url='https://porwalroadways.000webhostapp.com/mail.php?name='
   public rentalcollection:AngularFirestoreCollection
   public appliedrentalcollection:AngularFirestoreCollection
@@ -22,7 +22,7 @@ export class RentalService {
     this.rentalcollection=this.db.collection('rental',ref=>ref.orderBy('date',"desc"))
     this.appliedrentalcollection=this.db.collection('appliedrental',ref=>ref.orderBy('date',"desc"))
     this.enquirycollection=this.db.collection('enquiry',ref=>ref.orderBy('date',"desc"))  
-    /* this.getLocalities().subscribe(date=>this.localities=date) */
+    this.db.collection('localities',ref=>ref.orderBy('locality')).valueChanges().subscribe(data=>this.localities=data)
   }
 
   

@@ -59,7 +59,7 @@
                     <!-- <input type="text" class="form-control" placeholder="LOCALITY" [(ngModel)]="property.locality"> -->
                     <select class="form-control" [(ngModel)]="property.locality">
                         <option value="">Select Locality</option>    
-                        <option *ngFor="let localit of rentalservice.localities" value="{{localit}}">{{localit}}</option>
+                        <option *ngFor="let localit of rentalservice.localities" value="{{localit.lacality}}">{{localit.locality}}</option>
                 </select>
                 </div>
                 <div class="col">
