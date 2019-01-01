@@ -1,6 +1,6 @@
 <nav id="navbar" class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color:#1e466f;opacity: 1;">
   <a style="color:#ffffff" class="navbar-brand" routerLink="/"></a>
-  <a style="color:#ffffff" class="navbar-brand" routerLink="/"><img src="assets/images/logo.png" alt="" width="40px"> ORURENTALS </a>
+  <a style="color:#ffffff" class="navbar-brand" routerLink="/"><img src="assets/images/logo.png" alt="" width="40px"> ORU RENTALS </a>
   <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
@@ -59,7 +59,7 @@
                     <!-- <input type="text" class="form-control" placeholder="LOCALITY" [(ngModel)]="property.locality"> -->
                     <select class="form-control" [(ngModel)]="property.locality">
                         <option value="">Select Locality</option>    
-                        <option *ngFor="let localit of rentalservice.localities" value="{{localit.lacality}}">{{localit.locality}}</option>
+                        <option *ngFor="let localit of rentalservice.localities" value="localit.lacality">{{localit.locality}}</option>
                 </select>
                 </div>
                 <div class="col">

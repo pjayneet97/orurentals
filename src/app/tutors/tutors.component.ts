@@ -20,7 +20,7 @@ export class TutorsComponent implements OnInit {
   tutor:Tutor={}
   demo:{date?:Date,name?:string,contact?:string}={}
   constructor(public tutorservice:TutorService,public title:Title,public meta:Meta) { 
-    this.title.setTitle('Orurental Tutors')
+    this.title.setTitle('Oru Home Tuitions')
     this.meta.updateTag({ name: 'description', content: 'join best home tutor in udaipur if you are looking for tuition classes in udaipur we are top udaipur tutors we provides best home tuitions in udaipur' })
   }
 
